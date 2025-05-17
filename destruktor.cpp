@@ -12,3 +12,9 @@ public:
     void cetakData();  // Fungsi untuk mencetak isi array
     void isiData();    // Fungsi untuk mengisi array dari input
 };
+// Definisi member function constructor
+angka::angka(int i) { // Constructor
+    panjang = i;
+    arr = new int[i];     // Alokasi memori array
+    isiData();            // Memanggil fungsi input data
+}
