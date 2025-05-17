@@ -122,13 +122,33 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     Mahasiswa mhs;
+    mhs.setData("Rossa Kayla", "M12345");
+    
     Dosen dosen;
+    dosen.setData("Ibu Rachel", "D67890", "Lektor", 10000000);
+    
     Staff staff;
+    staff.setData("Anggun", "S54321", 5000000);
+    
     Universitas univ;
-
+    
+    // Dosen memberi nilai mahasiswa
+    dosen.beriNilai(&mhs, 95.5);
+    
+    // Staff mengubah pangkat dosen
+    staff.ubahPangkat(&dosen, "Lektor Kepala");
+    
+    // Menampilkan informasi
+    mhs.display();
+    dosen.display();
+    staff.display();
+    
+    // Menampilkan informasi gaji
+    univ.infoGajiDosen(&dosen);
+    univ.infoGajiStaff(&staff);
+    
     return 0;
 }
-
-
