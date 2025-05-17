@@ -13,3 +13,8 @@ public:
     mahasiswa(int iNim, string iNama);       // Constructor dengan parameter int dan string
     void cetak();                            // Method untuk mencetak data
 };
+
+mahasiswa::mahasiswa() {
+    nim = 0;
+    nama = "";
+}
