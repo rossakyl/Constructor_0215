@@ -18,3 +18,10 @@ angka::angka(int i) { // Constructor
     arr = new int[i];     // Alokasi memori array
     isiData();            // Memanggil fungsi input data
 }
+angka::~angka() { // Destructor
+    cout << endl;
+    cetakData();               // Cetak isi array sebelum dihapus
+    delete[] arr;              // Menghapus array
+    cout << "Alamat Array Sudah Dilepaskan" << endl;
+}
+
