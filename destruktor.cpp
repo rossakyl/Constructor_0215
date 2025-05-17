@@ -37,3 +37,11 @@ void angka::isiData() {
     }
     cout << endl;
 }
+
+int main() {
+    angka belajarcpp(3);                     // Constructor dipanggil (stack object)
+    angka *ptrBelajarcpp = new angka(5);     // Constructor dipanggil (heap object)
+    delete ptrBelajarcpp;                    // Destructor dipanggil secara manual
+
+    return 0;
+}
