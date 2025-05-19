@@ -1,9 +1,10 @@
 // buatlah sebuah program dengan pendekatam OOP yang implmentasikan friend class, friend function dan pointer
 
-#include <iostream>
-#include <string>
-using namespace std;
+#include <iostream>        //untuk input/output (fungsi cin, cout).
+#include <string>         // Agar bisa menggunakan tipe data string.
+using namespace std;     //Menghindari penulisan std:: secara berulang
 
+// class yamg akan dideklarasikan
 class Dosen;
 class Staff;
 class Universitas;
@@ -17,13 +18,21 @@ private:
     string NIM;
     float nilai;  
 
-public:
+    //SET DATA untuk mengisi atau mengatur nilai dari atribut-atribut privat 
+public:  
     void setData(string pNama, string pNIM, float pNilai = 0) {
         nama = pNama;
         NIM = pNIM;
         nilai = pNilai;
     }
-    
+
+    //pNama → parameter
+
+    //nama → atribut class
+
+    //nama (atribut class) = pNama (parameter fungsi)
+
+
     void display() {
         cout << "Mahasiswa: " << nama << " (" << NIM << "), Nilai: " << nilai << endl;
     }
